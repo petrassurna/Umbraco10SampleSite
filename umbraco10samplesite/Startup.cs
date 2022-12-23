@@ -1,3 +1,7 @@
+//using LuceneSearch;
+//using Searchable;
+//using USiteSearch.Notifications;
+
 namespace umbraco10samplesite
 {
   public class Startup
@@ -33,7 +37,10 @@ namespace umbraco10samplesite
           .AddBackOffice()
           .AddWebsite()
           .AddComposers()
+          //.AddDNSExtensions()
           .Build();
+
+      //services.AddSingleton(typeof(ISearchProvider), new LuceneProvider("app_data/USiteSearch", 12));
     }
 
     /// <summary>
