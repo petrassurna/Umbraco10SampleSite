@@ -24,8 +24,8 @@
     <title>@Model.Value("title")</title>
 
     @*
-      <link rel="stylesheet" href="usitesearch-css-bundle" />
-      <script src="usitesearch-js-bundle"></script>
+    <link rel="stylesheet" href="usitesearch-css-bundle" />
+    <script src="usitesearch-js-bundle"></script>
     *@
 
 </head>
@@ -33,7 +33,17 @@
 <body>
 
     @*
-      @Html.Partial("~/Views/Partials/USiteSearch/site-search.cshtml")
+    <section id="dns-search-bar" class="dns-search-bar" usitesearch-exclude="true" zzz>
+    <div id="dns-search-fields" class="dns-search-fields">
+    <input id="dns-search-input" type="text" placeholder="search">
+    <img id="dns-search-loader" src="/usitesearch/images/spinner.gif" width="50" height="50">
+    <a href="#" id="dns-search-close" title="Close"><img src="/usitesearch/images/icon-close.svg"></a>
+    </div>
+
+    <div id="dns-search-results" class="dns-search-results">
+    </div>
+    </section>
+    <div id="dns-search-overlay"></div>
     *@
 
 
