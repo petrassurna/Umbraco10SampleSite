@@ -1,6 +1,10 @@
+using Umbraco.Cms.Core.Notifications;
+using UmbracoExtensions;
+
 //using LuceneSearch;
 //using Searchable;
 //using USiteSearch.Notifications;
+
 
 namespace umbraco10samplesite
 {
@@ -37,7 +41,8 @@ namespace umbraco10samplesite
           .AddBackOffice()
           .AddWebsite()
           .AddComposers()
-          //.AddDNSExtensions()
+          //.AddUSiteSearch()
+          .AddNotificationHandler<UmbracoApplicationStartingNotification, CreateBundlesNotificationHandler>()
           .Build();
 
       //services.AddSingleton(typeof(ISearchProvider), new LuceneProvider("app_data/USiteSearch", 12));
