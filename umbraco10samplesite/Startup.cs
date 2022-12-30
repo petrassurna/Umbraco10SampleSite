@@ -45,7 +45,7 @@ namespace umbraco10samplesite
           .AddNotificationHandler<UmbracoApplicationStartingNotification, CreateBundlesNotificationHandler>()
           .Build();
 
-      //services.AddSingleton(typeof(ISearchProvider), new LuceneProvider("app_data/USiteSearch", 12));
+      //services.AddSingleton(typeof(ISearchProvider), new LuceneProvider("app_data/USiteSearch", 10));
     }
 
     /// <summary>
